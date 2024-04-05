@@ -29,86 +29,92 @@
   },
   "work": [
     {
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
-      "highlights": ["Started the company"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "name": "Freelance",
+      "position": "Programador Trainee - Asistente de Proyecto",
+      "startDate": "2023-04-20",
+      "endDate": "2023-11-20",
+      "summary": "Como asistente de proyecto mis responsabilidades en el proyecto de desarrollo de software fueron: Colaborar estrechamente con el equipo de desarrollo en la implementación de código, resolución de problemas y desarrollo de nuevas características, contribuyendo a la entrega oportuna y eficiente del proyecto. Participar en sesiones de revisión de código y pruebas de software para garantizar la calidad y el funcionamiento óptimo de las aplicaciones. Documentar el proyecto.",
+      "highlights": ["."]
     }
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "institution": "Universidad Santa María",
+      "area": "Ingeniería de Sistemas",
+      "startDate": "2020",
+      "endDate": "Presente",
+      "summary": "Cursando Actualmente 8vo Semestre",
+      "url": " "
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    }
-  ],
-  "languages": [
+      "name": "Git",
+      "level": "Avanzado"
+    },
     {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
+      "name": "Github",
+      "level": "Avanzado"
+    },
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
+      "name": "Python",
+      "level": "Intermedio"
+    },
     {
-      "name": "Jane Doe",
-      "reference": "Reference…"
+      "name": "C/C++",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Javascript",
+      "level": "Principiante"
+    },
+    {
+      "name": "SQLite3",
+      "level": "Intermedio"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Figma",
+      "level": "Principiante"
+    },
+    {
+      "name": "Html/CSS",
+      "level": "Intermedio"
+    },
+    {
+      "name": "React/Next/Astro",
+      "level": "Principiante"
+    },
+    {
+      "name": "Inteligencia Aritificial",
+      "level": "Intermedio"
+    },
+    {
+      "name": "Microsoft Office",
+      "level": "Avanzado"
+    },
+    {
+      "name": "Django Rest Framework",
+      "level": "Principiante"
+    },
+    {
+      "name": "Data Science",
+      "level": "Principiante"
+    },
+    {
+      "name": "Data Analysis",
+      "level": "Principiante"
+    },
+    {
+      "name": "Visual Studio Code",
+      "level": "Principiante"
+    },
+    {
+      "name": "Windows Powershell",
+      "level": "Principiante"
     }
   ],
   "projects": [

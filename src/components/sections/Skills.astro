@@ -1,5 +1,19 @@
 ---
 import Section from "../Section.astro";
+
+import { skills } from "@cv"
 ---
 
-<Section title="Skills" />
+<Section title="Skills">
+    <ul  class="inline-flex flex-wrap gap-2">
+        {
+            skills.map(({ name }) =>(
+                <li class="items-center bg-gray-200 rounded-md text-black text-sm font-semibold gap-1 px-3 py-1">
+                    <span>
+                        {name}
+                    </span>
+                </li>
+            ))
+        }
+    </ul>
+</Section>

@@ -1,5 +1,34 @@
 ---
 import Section from "../Section.astro";
+
+import { education } from '@cv'
 ---
 
-<Section title="Education" />
+<Section title="Educación/Certificados">
+    <ul class="flex flex-col gap-5">
+        {education.map (({ institution, area, startDate, endDate, summary, url}) => {
+           return(
+           <li>
+                <article>
+                    <header class="flex justify-between">
+                        <div>
+                            <h3 class="font-bold text-black text-sm">{institution}</h3>
+                            <h4 class="font-bold text-black text-sm">{area}</h4>
+                        </div>
+                        <time class="text-gray-600 text-xs min-w-[102px]">{startDate} - {endDate}</time>
+                    </header>
+                    <footer>                        
+                        <p class="text-gray-600 text-sm">
+                            {summary}
+                        </p>
+                        <a class="text-gray-600 text-sm"
+                        href={`${url}`}>
+                        {url}
+                        </a>
+                    </footer>
+                </article>
+            </li>
+            )
+        })}
+    </ul>
+</Section>
