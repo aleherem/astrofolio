@@ -115,16 +115,40 @@
     {
       "name": "Windows Powershell",
       "level": "Principiante"
+    },
+    {
+      "name": "Bun",
+      "level": "Principiante"
+    },
+    {
+      "name": "Node",
+      "level": "Principiante"
     }
   ],
   "projects": [
     {
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/"
+      "name": "Encriptador",
+      "url": "https://github.com/aleherem/Encriptador",
+      "description": "Programa de encriptación AZ16 en C",
+      "highlights": ["Aprendizaje", "C"]
+    },
+    {
+      "name": "Ajedrez",
+      "url": "https://github.com/aleherem/Ajedrez-C",
+      "description": "Programa Simple de C++ para jugar ajedrez",
+      "highlights": ["Aprendizaje", "C"]
+    },
+    {
+      "name": "Task APP",
+      "url": "https://github.com/aleherem/djangrest-nextjs",
+      "description": "Programa Simple para crear tareas hecho con Next y Django Rest Framework",
+      "highlights": ["Aprendizaje", "Django", "Next"]
+    },
+    {
+      "name": "Poke API",
+      "url": "https://github.com/aleherem/PokeAPI",
+      "description": "Pokedex sencilla hecha en React usando TypeScript",
+      "highlights": ["Aprendizaje", "React", "TypeScript"]
     }
   ]
 }

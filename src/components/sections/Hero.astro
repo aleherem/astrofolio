@@ -17,6 +17,10 @@ const SOCIAL_ICONS: SocialIcon = {
     Github,
     X
 }
+const linkedInfo = profiles.find(({ network }) => network === "Linkedin")
+const linkedUrl = linkedInfo?.url
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
 ---
 
 <Section>
@@ -27,7 +31,10 @@ const SOCIAL_ICONS: SocialIcon = {
             <span class="text-black font-light text-base flex items-center justify-normal gap-2">
                 <WorldMap /> {city}, {region}
             </span>
-            <footer class="text-gray-700 text-xs flex gap-1 mt-1">
+            <footer class="text-black font-bold text-sm leading-tight break-words hidden print:block">
+                {printInfo}
+            </footer>
+            <footer class="text-gray-700 text-xs flex gap-1 mt-1 print:hidden">
                 {
                     email  && (
                         <a class="text-gray-600 inline-flex items-center justify-center 
@@ -80,4 +87,3 @@ const SOCIAL_ICONS: SocialIcon = {
             <img src={image} alt={name} class="w-32 h-32 object-cover rounded-lg"/>
         </figure>
     </div>
-</Section>
