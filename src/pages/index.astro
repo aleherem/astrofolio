@@ -10,9 +10,13 @@ import Hero from '@/components/sections/Hero.astro'
 import Projects from '@/components/sections/Projects.astro'
 import KeyboardManager from '@/components/KeyboardManager.astro';
 
+import { basics } from "@cv"
+
+const { name, label } = basics
+
 ---
 
-<Layout title="Astrofolio">
+<Layout title=`Portfolio de ${name}`>
 	<main class="p-16 w-full mx-auto">
 		<Section>
 			<Hero />
