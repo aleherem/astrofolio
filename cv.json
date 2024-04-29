@@ -85,12 +85,8 @@
       "level": "Intermedio"
     },
     {
-      "name": "React/Next/Astro",
+      "name": "React",
       "level": "Principiante"
-    },
-    {
-      "name": "Inteligencia Aritificial",
-      "level": "Intermedio"
     },
     {
       "name": "Microsoft Office",
@@ -98,30 +94,6 @@
     },
     {
       "name": "Django Rest Framework",
-      "level": "Principiante"
-    },
-    {
-      "name": "Data Science",
-      "level": "Principiante"
-    },
-    {
-      "name": "Data Analysis",
-      "level": "Principiante"
-    },
-    {
-      "name": "Visual Studio Code",
-      "level": "Principiante"
-    },
-    {
-      "name": "Windows Powershell",
-      "level": "Principiante"
-    },
-    {
-      "name": "Bun",
-      "level": "Principiante"
-    },
-    {
-      "name": "Node",
       "level": "Principiante"
     }
   ],
