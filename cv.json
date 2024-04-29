@@ -3,9 +3,9 @@
     "name": "Alejandro Rodriguez",
     "label": "Estudiante de Ingenieria de Sistemas y Programador Junior a Tiempo Parcial",
     "image": "/me.webp",
-    "email": "ajrodriguez.2628@gmail,com",
+    "email": "ajrodriguez.2628@gmail.com",
     "phone": "(+58) 414-3656395",
-    "url": " ",
+    "birth": "10/10/2000",
     "summary": "Estudiante de pregrado de Ingenieria de Sistemas con experienca basica en el desarrollo web y fluido en el Ingles. Vivo en Caracas, Venezuela. He tenido varias experiencias en el lado de la programación de paginas web y estoy en la busqueda de pasantías o trabajos de medio tiempo",
     "location": {
       "address": " ",
@@ -118,7 +118,7 @@
     },
     {
       "name": "Poke API",
-      "url": "https://github.com/aleherem/PokeAPI",
+      "url": "https://pokedex-reacts.netlify.app/",
       "description": "Pokedex sencilla hecha en React usando TypeScript",
       "highlights": ["Aprendizaje", "React", "TypeScript"]
     }

@@ -1,34 +1,43 @@
 ---
 import Section from "../Section.astro";
 
-import { education } from '@cv'
+import { education } from "@cv";
 ---
 
 <Section title="Educación">
-    <ul class="flex flex-col gap-5">
-        {education.map (({ institution, area, startDate, endDate, summary, url}) => {
-           return(
-           <li>
-                <article>
-                    <header class="flex justify-between">
-                        <div>
-                            <h3 class="font-bold text-black text-sm">{institution}</h3>
-                            <h4 class="font-bold text-black text-sm">{area}</h4>
-                        </div>
-                        <time class="text-gray-600 text-xs min-w-[102px]">{startDate} - {endDate}</time>
-                    </header>
-                    <footer>                        
-                        <p class="text-gray-600 text-sm">
-                            {summary}
-                        </p>
-                        <a class="text-gray-600 text-sm"
-                        href={`${url}`}>
-                        {url}
-                        </a>
-                    </footer>
-                </article>
+  <ul class="flex flex-col gap-5">
+    {
+      education.map(
+        ({ institution, area, startDate, endDate, summary, url }) => {
+          return (
+            <li>
+              <article>
+                <header class="flex justify-between">
+                  <div>
+                    <h3 class="font-bold text-black text-sm dark:text-slate-200">
+                      {institution}
+                    </h3>
+                    <h4 class="font-bold text-black text-sm dark:text-slate-200">
+                      {area}
+                    </h4>
+                  </div>
+                  <time class="text-gray-600 text-xs min-w-[102px] dark:text-slate-200">
+                    {startDate} - {endDate}
+                  </time>
+                </header>
+                <footer>
+                  <p class="text-gray-600 text-sm dark:text-slate-400">
+                    {summary}
+                  </p>
+                  <a class="text-gray-600 text-sm" href={`${url}`}>
+                    {url}
+                  </a>
+                </footer>
+              </article>
             </li>
-            )
-        })}
-    </ul>
+          );
+        }
+      )
+    }
+  </ul>
 </Section>

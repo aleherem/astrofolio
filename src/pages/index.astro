@@ -1,31 +1,79 @@
 ---
-import Layout from '../layouts/Layout.astro'
+client: true;
 
-import Section from '@/components/Section.astro'
-import About from '@/components/sections/About.astro'
-import Education from '@/components/sections/Education.astro'
-import Experience from '@/components/sections/Experience.astro'
-import Skills from '@/components/sections/Skills.astro';
-import Hero from '@/components/sections/Hero.astro'
-import Projects from '@/components/sections/Projects.astro'
-import KeyboardManager from '@/components/KeyboardManager.astro';
+import Layout from "../layouts/Layout.astro";
 
-import { basics } from "@cv"
+import Section from "@/components/Section.astro";
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
 
-const { name, label } = basics
+import { basics } from "@cv";
 
+const { name, label } = basics;
 ---
 
 <Layout title=`Portfolio de ${name}`>
-	<main class="p-16 w-full mx-auto">
-		<Section>
-			<Hero />
-			<About />
-			<Experience />
-			<Education />
-			<Skills />
-			<Projects />
-		</Section>
-	</main>
-	<KeyboardManager />
+  <label for="modo-switch" class="mx-16 mt-8 cursor-pointer fixed print:hidden">
+    <input type="checkbox" id="modo-switch" class="hidden" />
+    <div
+      class="relative w-10 h-6 bg-slate-700 rounded-full shadow-inne dark:bg-slate-100"
+    >
+      <div
+        class="sun-icon absolute top-0 left-0 h-full w-full flex items-center justify-center text-yellow-500 opacity-0"
+      >
+        🔅
+      </div>
+      <div
+        class="moon-icon absolute top-0 right-0 h-full w-full flex items-center justify-center text-gray-500"
+      >
+        🌙
+      </div>
+    </div>
+  </label>
+
+  <main class="p-16 w-full mx-auto dark:bg-slate-900">
+    <Section>
+      <Hero />
+      <About />
+      <Experience />
+      <Education />
+      <Skills />
+      <Projects />
+    </Section>
+  </main>
+  <KeyboardManager />
+
+  <script>
+    const switchInput = document.getElementById("modo-switch");
+
+    if (switchInput instanceof HTMLInputElement) {
+      switchInput.addEventListener("change", () => {
+        const sunIcon = document.querySelector(".sun-icon");
+        const moonIcon = document.querySelector(".moon-icon");
+
+        if (switchInput.checked) {
+          if (sunIcon !== null && moonIcon !== null) {
+            sunIcon.classList.remove("opacity-0");
+            moonIcon.classList.add("opacity-0");
+          }
+        } else {
+          if (sunIcon !== null && moonIcon !== null) {
+            sunIcon.classList.add("opacity-0");
+            moonIcon.classList.remove("opacity-0");
+          }
+        }
+
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+        } else {
+          document.documentElement.classList.add("dark");
+        }
+      });
+    }
+  </script>
 </Layout>

@@ -1,89 +1,112 @@
 ---
-import { basics } from '@cv';
-import Section from '@/components/Section.astro';
-import Mail from '@/icons/Mail.astro';
-import Phone from '@/icons/Phone.astro';
-import X from '@/icons/X.astro';
-import Linkedin from '@/icons/Linkedin.astro';
-import Github from '@/icons/Github.astro';
-import WorldMap from '@/icons/WorldMap.astro';
-import type { SocialIcon } from "@/types"
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import X from "@/icons/X.astro";
+import Linkedin from "@/icons/Linkedin.astro";
+import Github from "@/icons/Github.astro";
+import WorldMap from "@/icons/WorldMap.astro";
+import Calendar from "@/icons/Calendar.astro";
+import type { SocialIcon } from "@/types";
 
-const { name, label, image, location, profiles, phone, email} = basics
-const { city, region} = location
+const { name, label, image, location, profiles, phone, email, birth } = basics;
+const { city, region } = location;
 
 const SOCIAL_ICONS: SocialIcon = {
-    Linkedin,
-    Github,
-    X
-}
-const linkedInfo = profiles.find(({ network }) => network === "Linkedin")
-const linkedUrl = linkedInfo?.url
+  Linkedin,
+  Github,
+  X,
+};
+const linkedInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedUrl = linkedInfo?.url;
 
-const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
-    <div class="flex items-center justify-between gap-3">
-        <div class="flex flex-col gap-2 pr-4">
-            <h1 class="text-black font-bold text-3xl leading-tight break-words">{name}</h1>
-            <h2 class="text-black font-medium text-base leading-tight break-words">{label}</h2>
-            <span class="text-black font-light text-base flex items-center justify-normal gap-2">
-                <WorldMap /> {city}, {region}
-            </span>
-            <footer class="text-black font-bold text-sm leading-tight break-words hidden print:block">
-                {printInfo}
-            </footer>
-            <footer class="text-gray-700 text-xs flex gap-1 mt-1 print:hidden">
-                {
-                    email  && (
-                        <a class="text-gray-600 inline-flex items-center justify-center 
+  <div class="flex items-center justify-between gap-3">
+    <div class="flex flex-col gap-2 pr-4">
+      <h1
+        class="text-black font-bold text-3xl leading-tight break-words dark:text-sky-500"
+      >
+        {name}
+      </h1>
+      <h2
+        class="text-black font-medium text-base leading-tight break-words dark:text-slate-200"
+      >
+        {label}
+      </h2>
+      <span
+        class="text-black font-light text-base flex items-center justify-normal gap-3 dark:text-slate-400"
+      >
+        <WorldMap />
+        {city}, {region}
+        <Calendar />
+        {birth}
+      </span>
+      <footer
+        class="text-black font-bold text-sm leading-tight break-words hidden print:block"
+      >
+        {printInfo}
+      </footer>
+      <footer class="text-gray-700 text-xs flex gap-4 mt-1 print:hidden">
+        {
+          email && (
+            <a
+              class="text-gray-600 inline-flex items-center justify-center 
                         border border-gray-300 rounded-md p-1 h-8 w-8 transition 
-                        duration-300 ease hover:bg-gray-100 hover:border-gray-400"
-                        href={`mailto:${email}`}
-                        title={`Enviar un correo electronico a ${name} al correo ${email}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                           <Mail /> 
-                        </a>
-                    )
-                }
-                {
-                    phone  && (
-                        <a class="text-gray-600 inline-flex items-center justify-center 
+                        duration-300 ease hover:bg-gray-100 hover:border-gray-400
+                        dark:hover:bg-sky-500 dark:text-slate-200"
+              href={`mailto:${email}`}
+              title={`Enviar un correo electronico a ${name} al correo ${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              class="text-gray-600 inline-flex items-center justify-center 
                         border border-gray-300 rounded-md p-1 h-8 w-8 transition 
-                        duration-300 ease hover:bg-gray-100 hover:border-gray-400"
-                        href={`mailto:${phone}`}
-                        title={`Llamar a ${name} al telefono ${phone}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                           <Phone /> 
-                        </a>
-                    )
-                }
-                {
-                    profiles.map(({ network, url, username }) => {
-                        const Icon = SOCIAL_ICONS[network]
-                        
-                        return(
-                            <a class="text-gray-600 inline-flex items-center justify-center 
+                        duration-300 ease hover:bg-gray-100 hover:border-gray-400
+                        dark:hover:bg-sky-500 dark:text-slate-200"
+              href={`mailto:${phone}`}
+              title={`Llamar a ${name} al telefono ${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Phone />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url, username }) => {
+            const Icon = SOCIAL_ICONS[network];
+
+            return (
+              <a
+                class="text-gray-600 inline-flex items-center justify-center 
                             border border-gray-300 rounded-md p-1 h-8 w-8 transition 
-                            duration-300 ease hover:bg-gray-100 hover:border-gray-400"
-                            href={url}
-                            title={`Visitar el perfil de ${username} en ${network}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                                <Icon />
-                            </a>
-                        )
-                    })
-                }
-            </footer>
-        </div>
-        <figure>
-            <img src={image} alt={name} class="w-32 h-32 object-cover rounded-lg"/>
-        </figure>
+                            duration-300 ease hover:bg-gray-100 hover:border-gray-400
+                            dark:hover:bg-sky-500 dark:text-slate-200"
+                href={url}
+                title={`Visitar el perfil de ${username} en ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon />
+              </a>
+            );
+          })
+        }
+      </footer>
     </div>
+    <figure>
+      <img src={image} alt={name} class="w-32 h-32 object-cover rounded-lg" />
+    </figure>
+  </div></Section
+>

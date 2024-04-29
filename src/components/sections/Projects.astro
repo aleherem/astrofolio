@@ -1,42 +1,50 @@
 ---
 import Section from "../Section.astro";
 
-import { projects } from "@cv"
+import { projects } from "@cv";
 ---
 
 <Section title="Projects">
-    <ul>
-        {
-            projects.map(({ url, description, highlights, name}) => {
-                return(
-                <li>
-                    <article  class="border border-gray-200 rounded-lg flex flex-col gap-4 p-4 h-full">
-                        <header>
-                            <a href={url}
-                            title={`Ver el proyecto ${name}`}
-                            class="text-black font-bold hover:underline">
-                            <h3  class="mb-2">{name}</h3>
-                            </a>
-                            <p class="text-sm leading-tight mb-2">{description}</p>
-                        </header>
-                        <footer class="flex flex-wrap gap-1 text-xs">
-                                {highlights.map((highlights) =>{
-                                    return <span class="rounded-md bg-gray-200 text-gray-700 font-semibold px-2 py-1">{highlights}</span>
-                                })}
-                        </footer>
-                    </article>
-                </li>
-                )
-            })
-        }
-    </ul>
+  <ul>
+    {
+      projects.map(({ url, description, highlights, name }) => {
+        return (
+          <li class="p-4">
+            <article class="border border-gray-200 rounded-lg flex flex-col gap-6 p-8 h-full">
+              <header>
+                <a
+                  href={url}
+                  title={`Ver el proyecto ${name}`}
+                  class="text-black font-bold hover:underline dark:text-sky-500"
+                >
+                  <h3 class="mb-2">{name}</h3>
+                </a>
+                <p class="text-sm leading-tight mb-2 dark:text-slate-200">
+                  {description}
+                </p>
+              </header>
+              <footer class="flex flex-wrap gap-1 text-xs">
+                {highlights.map((highlights) => {
+                  return (
+                    <span class="rounded-md bg-gray-200 text-gray-700 font-semibold px-2 py-1">
+                      {highlights}
+                    </span>
+                  );
+                })}
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Section>
 
 <style>
-    ul {
+  ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-inline: -16px;
-    }
+  }
 </style>

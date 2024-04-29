@@ -1,34 +1,46 @@
 ---
 import Section from "../Section.astro";
 
-import { work } from '@cv'
+import { work } from "@cv";
 ---
 
 <Section title="Experiencia">
-    <ul class="flex flex-col gap-8">
-        {work.map (({ name, startDate, endDate, position, summary, highlights }) => {
-           return(
-           <li>
-                <article>
-                    <header class="flex justify-between items-start mb-1">
-                        <div>
-                            <h3 class="font-bold text-black text-base">{name}</h3>
-                            <h4 class="font-bold text-black text-base">{position}</h4>
-                        </div>
-                        <time class="text-gray-600 text-xs min-w-[102px]">{startDate} - {endDate}</time>
-                    </header>
-                    <footer>                        
-                        <p class="text-gray-600 text-sm leading-relaxed my-0 break-words">{summary}</p>
-                        </footer>
-                </article>
+  <ul class="flex flex-col gap-8">
+    {
+      work.map(
+        ({ name, startDate, endDate, position, summary, highlights }) => {
+          return (
+            <li>
+              <article>
+                <header class="flex justify-between items-start mb-1">
+                  <div>
+                    <h3 class="font-bold text-black text-base dark:text-slate-200">
+                      {name}
+                    </h3>
+                    <h4 class="font-bold text-black text-base dark:text-slate-200">
+                      {position}
+                    </h4>
+                  </div>
+                  <time class="text-gray-600 text-xs min-w-[102px] dark:text-slate-200">
+                    {startDate} - {endDate}
+                  </time>
+                </header>
+                <footer>
+                  <p class="text-gray-600 text-sm leading-relaxed my-0 break-words dark:text-slate-400">
+                    {summary}
+                  </p>
+                </footer>
+              </article>
             </li>
-            )
-        })}
-    </ul>
+          );
+        }
+      )
+    }
+  </ul>
 </Section>
 
 <style>
-    @media (width <= 700px) {
+  @media (width <= 700px) {
     time {
       text-align: right;
     }
