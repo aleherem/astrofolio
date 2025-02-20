@@ -29,12 +29,20 @@
   },
   "work": [
     {
-      "name": "Freelance",
-      "position": "Programador Trainee - Asistente de Proyecto",
-      "startDate": "2023-04-20",
-      "endDate": "2023-11-20",
-      "summary": "Como asistente de proyecto mis responsabilidades en el proyecto de desarrollo de software fueron: Colaborar estrechamente con el equipo de desarrollo en la implementación de código, resolución de problemas y desarrollo de nuevas características, contribuyendo a la entrega oportuna y eficiente del proyecto. Participar en sesiones de revisión de código y pruebas de software para garantizar la calidad y el funcionamiento óptimo de las aplicaciones. Documentar el proyecto.",
+      "name": "Grupo Médico Santa Paula",
+      "position": "Pasante - Desarrollador de CRM",
+      "startDate": "2024-10",
+      "endDate": "Actualidad",
+      "summary": "Pasante en el área comercial con habilidades técnicas en CRM, Python y desarrollo de software, enfocada en la automatización de procesos para mejorar la productividad y los resultados del equipo comercial.",
       "highlights": ["."]
+    },
+    {
+        "name": "Freelance",
+        "position": "Programador Trainee - Asistente de Proyecto",
+        "startDate": "2023-04-20",
+        "endDate": "2023-11-20",
+        "summary": "Como asistente de proyecto mis responsabilidades en el proyecto de desarrollo de software fueron: Colaborar estrechamente con el equipo de desarrollo en la implementación de código, resolución de problemas y desarrollo de nuevas características, contribuyendo a la entrega oportuna y eficiente del proyecto. Participar en sesiones de revisión de código y pruebas de software para garantizar la calidad y el funcionamiento óptimo de las aplicaciones. Documentar el proyecto.",
+        "highlights": ["."]
     }
   ],
   "education": [
